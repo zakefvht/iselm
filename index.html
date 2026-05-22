@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RICO HUB - HACKED</title>
+  <style>
+    /* استيراد الخطوط (Poppins للنص الواضح الكبير، و Share Tech Mono لباقي النصوص) */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&family=Share+Tech+Mono&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Share Tech Mono', monospace; 
+      color: #ffffff;
+      background-color: #000;
+      overflow: hidden;
+      cursor: pointer; 
+    }
+
+    /* إعدادات خلفية الفيديو */
+    .video-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .video-background video {
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover; 
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      filter: contrast(1.2) brightness(0.5); 
+    }
+
+    /* طبقة مظلمة فوق الفيديو */
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(10, 0, 0, 0.6); 
+      z-index: 1;
+    }
+
+    /* حاوية المحتوى الرئيسي */
+    .content {
+      position: relative;
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    /* العنوان الرئيسي - RICO HUB */
+    .logo {
+      font-size: 3rem;
+      font-weight: 900;
+      color: #ff0000;
+      text-shadow: 0 0 10px #ff0000, 0 0 20px #8b0000;
+      margin-bottom: 20px;
+      animation: glitch 1.5s infinite; 
+    }
+
+    /* عبارة الاختراق - تم جعلها ضخمة وواضحة جداً */
+    h1 {
+      font-family: 'Poppins', sans-serif; /* خط عريض وواضح جداً */
+      font-size: clamp(3rem, 6vw, 6rem); /* حجم متجاوب يكبر جداً في الشاشات الكبيرة */
+      font-weight: 900;
+      color: #ff0000; /* أحمر فاقع */
+      -webkit-text-stroke: 2px #ffffff; /* إطار أبيض حول النص لزيادة الوضوح */
+      text-shadow: 0 0 20px #ff0000, 0 0 40px #ff0000, 0 0 60px #8b0000; /* توهج أحمر ساطع */
+      margin-bottom: 50px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      animation: pulseClear 2s infinite alternate; /* حركة نبض هادئة ومريحة للعين */
+    }
+
+    /* زر الديسكورد */
+    .discord-btn {
+      display: inline-block;
+      padding: 15px 40px;
+      font-size: 1.5rem;
+      color: #ffffff;
+      text-decoration: none;
+      border: 2px solid #ff0000;
+      border-radius: 10px;
+      background: rgba(255, 0, 0, 0.1);
+      box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+      transition: all 0.3s ease;
+      margin-bottom: 50px;
+      letter-spacing: 2px;
+    }
+
+    .discord-btn:hover {
+      background: rgba(255, 0, 0, 0.4);
+      box-shadow: 0 0 30px rgba(255, 0, 0, 0.8);
+      transform: scale(1.05);
+    }
+
+    /* الحقوق في الأسفل */
+    .footer {
+      font-size: 1.2rem;
+      color: #b0b0b0;
+      letter-spacing: 1px;
+      text-shadow: 0 0 5px #ffffff;
+    }
+
+    /* الأنيميشن */
+    @keyframes pulseClear {
+      from {
+        transform: scale(1);
+        text-shadow: 0 0 20px #ff0000, 0 0 30px #8b0000;
+      }
+      to {
+        transform: scale(1.03);
+        text-shadow: 0 0 30px #ff0000, 0 0 50px #ff0000, 0 0 20px #ffffff;
+      }
+    }
+
+    @keyframes glitch {
+      0% { text-shadow: 3px 0 red, -3px 0 darkred; }
+      20% { text-shadow: -3px 0 red, 3px 0 darkred; }
+      40% { text-shadow: 3px 0 red, -3px 0 darkred; }
+      60% { text-shadow: -3px 0 red, 3px 0 darkred; }
+      80% { text-shadow: 3px 0 red, -3px 0 darkred; }
+      100% { text-shadow: -3px 0 red, 3px 0 darkred; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="video-background">
+    <video id="bgVideo" autoplay loop muted playsinline>
+      <source src="Al qawlo qawlo Sawarim _ (Slowed - Reverb) Nasheed Abu Ali.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <div class="overlay"></div>
+
+  <div class="content">
+    <div class="logo">RICO HUB</div>
+    
+    <h1># HACKED BY ISLAM HD</h1>
+
+    <a href="https://DISCORD.GG/RICOHUB" target="_blank" class="discord-btn">DISCORD.GG/RICOHUB</a>
+
+    <div class="footer">Browse by Zino X Rico HUB</div>
+  </div>
+
+  <script>
+    document.addEventListener("click", function () {
+      var video = document.getElementById("bgVideo");
+      if (video.muted) {
+        video.muted = false; // إلغاء كتم الصوت لتشتغل الأنشودة
+      }
+    });
+  </script>
+
+</body>
+
+</html>
